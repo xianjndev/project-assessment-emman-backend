@@ -9,5 +9,5 @@ class Tasks_1 extends Model
 {
     /** @use HasFactory<\Database\Factories\Tasks1Factory> */
     use HasFactory;
-    protected $fillable = ['user_id', 'title','description', 'status','priority', 'isCompleted'];
+    protected $fillable = ['user_id', 'title','description', 'status','priority', 'isCompleted', 'order'];
 }

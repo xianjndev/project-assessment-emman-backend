@@ -17,6 +17,10 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum'])->get('/getTasks', [TaskController::class, 'index']);
 //post
 Route::middleware(['auth:sanctum'])->post('/storeTask', [TaskController::class, 'store']);
+//update
+Route::post('/updateOrder/{id}', [TaskController::class, 'update']);
+
+Route::post('/sort', [TaskController::class, 'sortOrder']);
 
 Route::post('/login', function (Request $request) {
     $request->validate([
